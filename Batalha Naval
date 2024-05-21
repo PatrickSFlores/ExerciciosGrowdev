@@ -1,0 +1,187 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMMR53OTikyp4AiKZ+NCCXs",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PatrickSFlores/ExerciciosGrowdev/blob/main/Batalha%20Naval\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hCKCRL6ATTnR",
+        "outputId": "350beca3-a5b4-4b5a-e2bd-0ab41dfcf307"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a coordenada x (0-19): 1\n",
+            "Digite a coordenada y (0-19): 1\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 10\n",
+            "Digite a coordenada y (0-19): 10\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 1\n",
+            "Digite a coordenada y (0-19): 1\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 11\n",
+            "Digite a coordenada y (0-19): 11\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 12\n",
+            "Digite a coordenada y (0-19): 12\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 13\n",
+            "Digite a coordenada y (0-19): 13\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 14\n",
+            "Digite a coordenada y (0-19): 14\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 15\n",
+            "Digite a coordenada y (0-19): 15\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 16\n",
+            "Digite a coordenada y (0-19): 16\n",
+            "Você errou!\n",
+            "Digite a coordenada x (0-19): 17\n",
+            "Digite a coordenada y (0-19): 17\n",
+            "Você acertou um navio!\n",
+            "\n",
+            "Posições dos navios:\n",
+            "Navio na posição (2, 0)\n",
+            "Navio na posição (16, 2)\n",
+            "Navio na posição (4, 4)\n",
+            "Navio na posição (3, 6)\n",
+            "Navio na posição (11, 6)\n",
+            "Navio na posição (18, 6)\n",
+            "Navio na posição (1, 8)\n",
+            "Navio na posição (5, 8)\n",
+            "Navio na posição (8, 8)\n",
+            "Navio na posição (11, 9)\n",
+            "Navio na posição (6, 10)\n",
+            "Navio na posição (7, 10)\n",
+            "Navio na posição (11, 10)\n",
+            "Navio na posição (13, 10)\n",
+            "Navio na posição (0, 11)\n",
+            "Navio na posição (10, 14)\n",
+            "Navio na posição (7, 15)\n",
+            "Navio na posição (18, 15)\n",
+            "Navio na posição (17, 17)\n",
+            "Navio na posição (19, 18)\n",
+            "\n",
+            "Fim de jogo! Você perdeu.\n",
+            "Você teve 10 tentativas e acertou 1 navios.\n",
+            "Tabuleiro:\n",
+            "0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 0 \n",
+            "1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 \n",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "tabuleiro = [[0 for _ in range(20)] for _ in range(20)]\n",
+        "\n",
+        "num_navios = 0\n",
+        "\n",
+        "while num_navios < 20:\n",
+        "    x = random.randint(0, 19)\n",
+        "    y = random.randint(0, 19)\n",
+        "    if tabuleiro[y][x] == 0:\n",
+        "        tabuleiro[y][x] = 1\n",
+        "        num_navios += 1\n",
+        "\n",
+        "tentativas = 0\n",
+        "\n",
+        "navios_afundados = 0\n",
+        "\n",
+        "while tentativas < 10 and navios_afundados < 5:\n",
+        "    x = int(input(\"Digite a coordenada x (0-19): \"))\n",
+        "    y = int(input(\"Digite a coordenada y (0-19): \"))\n",
+        "\n",
+        "    if x < 0 or x > 19 or y < 0 or y > 19:\n",
+        "        print(\"Coordenadas inválidas. Por favor, digite números entre 0 e 19.\")\n",
+        "        continue\n",
+        "\n",
+        "    if tabuleiro[y][x] == 1:\n",
+        "        print(\"Você acertou um navio!\")\n",
+        "        navios_afundados += 1\n",
+        "    else:\n",
+        "        print(\"Você errou!\")\n",
+        "\n",
+        "    tentativas += 1\n",
+        "\n",
+        "print(\"\\nPosições dos navios:\")\n",
+        "for y in range(20):\n",
+        "    for x in range(20):\n",
+        "        if tabuleiro[y][x] == 1:\n",
+        "            print(f\"Navio na posição ({x}, {y})\")\n",
+        "\n",
+        "if navios_afundados == 5:\n",
+        "    print(\"\\nParabéns! Você afundou 5 navios!\")\n",
+        "else:\n",
+        "    print(\"\\nFim de jogo! Você perdeu.\")\n",
+        "\n",
+        "print(f\"Você teve {tentativas} tentativas e acertou {navios_afundados} navios.\")\n",
+        "\n",
+        "print(\"Tabuleiro:\")\n",
+        "for linha in tabuleiro:\n",
+        "    for valor in linha:\n",
+        "        print(valor, end=' ')\n",
+        "    print()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "lZCj0HRkYPhV"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
